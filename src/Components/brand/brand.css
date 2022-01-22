@@ -1,0 +1,86 @@
+.gpt3__brand {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+     
+}
+
+.gpt3__brand div {
+    flex: 1;
+    max-width: '60%';
+        min-width: '50%';
+    margin: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gpt3__whatgpt3-feature {
+    /* display: flex; */
+    max-width: '60%';
+}
+
+.gpt3__brand h1 {
+    font-size: 48px;
+}
+
+.gpt3__brand div p {
+    font-size: 18px;
+    font-family: 'Poppins';
+}
+
+@media screen and (max-width: 700px) {
+    .gpt3__brand {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .gpt3__brand h1 {
+        flex: 1;
+        max-width: '80%';
+        margin: 1rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .gpt3__brand div p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .gpt3__brand {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .gpt3__brand h1 {
+        flex: 1;
+        max-width: '80%';
+        margin: 1rem;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .gpt3__brand div p {
+        font-size: 14px;
+    }
+}
+

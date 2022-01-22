@@ -1,48 +1,43 @@
-import {BrowserRouter, Route, Switch, Redirect} from 'react-router-dom';
-import Navbar from './Components/Navbar';
-import Home from './Components/Home';
-import Login from './Components/Login';
-import Register from './Components/Register';
-import CreatePost from './Components/CreatePost';
-import AllPost from './Components/AllPost';
-import NotFound from './Components/NotFound';
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import Home from "./Pages/Home";
+import NotFound from "./Components/NotFound";
+import AboutUs from "./Pages/About";
+import "./App.css";
+import Gallery from "./Pages/Gallery";
+import Terms from "./Pages/Terms";
+import Register from "./Pages/Register";
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Navbar />
-        <Switch>
-        <Redirect from='/CreatePost' to='/Register' />
-          <Route exact path='/' component={Home}>
-            <Home />
+      {/* <div className="App"> */}
+      {/* <Navbar /> */}
+      {/* <Navbar /> */}
+      <Switch>
+        {/* <Redirect from='/CreatePost' to='/Register' /> */}
+        <Route exact path="/" component={Home}>
+          <Home />
+        </Route>
+
+        <Route exact path="/about" component={AboutUs}>
+          <AboutUs />
+        </Route>
+
+        <Route exact path='/gallery' component={Gallery}>
+            <Gallery />
           </Route>
 
-          <Route exact path='/Register' component={Register}>
-            <Register /> 
+        <Route exact path='/terms' component={Terms}>
+            <Terms />
           </Route>
 
-          <Route exact path='/Login' component={Login}>
-            <Login />
+        <Route exact path='/register' component={Register}>
+            <Register />
           </Route>
 
-          <Route exact path='/CreatePost' component={CreatePost}>
-            <CreatePost />
-          </Route>
-
-          <Route exact path='/AllPost' component={AllPost}>
-            <AllPost />
-          </Route>
-
-          <Route component=
-            {NotFound}>
-
-          </Route>
-
-          
-
-        </Switch>
-      </div>
+        <Route component={NotFound}></Route>
+      </Switch>
+      {/* </div> */}
     </BrowserRouter>
   );
 }

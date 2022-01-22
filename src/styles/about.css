@@ -1,0 +1,79 @@
+.abt__header {
+  height: 400px;
+  contain: content;
+}
+
+.abt_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.abt_title div {
+  flex: 1;
+  max-width: "60%";
+  min-width: "50%";
+  margin: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abt_title p {
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.abt_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 2rem;
+}
+
+.abt_info div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  max-width: 25%;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+.info_img {
+  align-self: center;
+  width: 130px;
+  height: 101px;
+}
+
+@media screen and (max-width: 500px) {
+  .abt_title p {
+    font-size: 16px;
+  }
+
+  .abt_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  
+    margin: 4rem 0 2rem;
+  }
+  .abt_info div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    max-width: 85%;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+}
