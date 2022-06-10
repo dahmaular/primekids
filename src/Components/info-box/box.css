@@ -65,9 +65,9 @@
 }
 
 .info__reg {
-  background-color: #00adef;
-  opacity: 0.5;
-  width: 23%;
+  background-color: #ffffff;
+  /* opacity: 0.5; */
+  width: 50%;
   height: 400px;
   margin-right: 20px;
   border-radius: 10px;
@@ -87,7 +87,7 @@
 }
 
 .info__win {
-  background-color: #fcb500;
+  background-color: #F3722D;
   opacity: 0.5;
   width: 23%;
   height: 400px;
@@ -120,12 +120,12 @@
 }
 
 .info__reg p {
-  color: white;
+  color: #7B0065;
   font-weight: 400;
   text-align: center;
   font-family: "Poppins";
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 18px;
+  line-height: 40px;
 }
 
 .info__vote p {
@@ -177,16 +177,16 @@
   }
 
   .info__reg {
-    background-color: #00adef;
+    /* background-color: #00adef; */
     /* opacity: 0.5; */
     width: 75%;
-    height: 280px;
+    height: 380px;
     margin-right: 20px;
     border-radius: 10px;
   }
 
   .info__vote {
-    background-color: #784dfe;
+    /* background-color: #784dfe; */
     /* opacity: 0.5; */
     width: 75%;
     height: 320px;
@@ -195,7 +195,7 @@
   }
 
   .info__win {
-    background-color: #fcb500;
+    /* background-color: #fcb500; */
     /* opacity: 0.5; */
     width: 75%;
     height: 320px;

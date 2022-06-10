@@ -6,39 +6,48 @@ import "./App.css";
 import Gallery from "./Pages/Gallery";
 import Terms from "./Pages/Terms";
 import Register from "./Pages/Register";
+import { ContestantContextProvider } from "./services/contestants-service";
+import { Profile } from "./Pages/profile";
+import Leaderboard from "./Pages/Leaderboard";
 
 function App() {
   return (
-    <BrowserRouter>
-      {/* <div className="App"> */}
-      {/* <Navbar /> */}
-      {/* <Navbar /> */}
-      <Switch>
-        {/* <Redirect from='/CreatePost' to='/Register' /> */}
-        <Route exact path="/" component={Home}>
-          <Home />
-        </Route>
+    <ContestantContextProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home}>
+            <Home />
+          </Route>
 
-        <Route exact path="/about" component={AboutUs}>
-          <AboutUs />
-        </Route>
+          <Route exact path="/about" component={AboutUs}>
+            <AboutUs />
+          </Route>
 
-        <Route exact path='/gallery' component={Gallery}>
+          <Route exact path="/gallery" component={Gallery}>
             <Gallery />
           </Route>
 
-        <Route exact path='/terms' component={Terms}>
+          {/* <Route exact path="/leaderboard" component={Leaderboard}>
+            <Leaderboard />
+          </Route> */}
+
+          <Route exact path="/terms" component={Terms}>
             <Terms />
           </Route>
 
-        <Route exact path='/register' component={Register}>
+          <Route exact path="/register" component={Register}>
             <Register />
           </Route>
 
-        <Route component={NotFound}></Route>
-      </Switch>
-      {/* </div> */}
-    </BrowserRouter>
+          <Route exact path="/profile/:id" component={Profile}>
+            <Profile />
+          </Route>
+
+          <Route component={NotFound}></Route>
+        </Switch>
+        {/* </div> */}
+      </BrowserRouter>
+    </ContestantContextProvider>
   );
 }
 

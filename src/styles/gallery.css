@@ -1,0 +1,30 @@
+.gal-image {
+    width: 100%;
+}
+.win-image {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        /* width: 100%; */
+        flex-direction: column;
+        padding: 10px;
+}
+
+.hof-row {
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+@media screen and (max-width: 500px) {
+    .hof-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .win-image {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+}
+ }

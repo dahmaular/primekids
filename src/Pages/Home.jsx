@@ -4,6 +4,9 @@ import { Footer, Header, Possibility, WhatGPT3 } from "../containers";
 import "../App.css";
 import InfoBox from "../Components/info-box/box";
 import { CountdownTimer } from "../Components/countdown/countdown";
+import LeadersBoard from "../containers/contestants/leadersBoard";
+import TermsBox from "../Components/terms-box/termsBox";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -12,12 +15,18 @@ function Home() {
         <Navbar />
         <Header />
       </div>
-        <InfoBox />
-      {/* <Brand /> */}
-      <WhatGPT3 />
       <Possibility />
+      <TermsBox />
       <CTA />
-      <CountdownTimer />
+      <div className="vote-btn">
+        <Link to="/gallery">
+          <button type="button">Vote Now </button>
+        </Link>
+        <CountdownTimer />
+      </div>
+      
+
+      <LeadersBoard />
       <Footer />
     </div>
   );

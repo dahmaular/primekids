@@ -9,14 +9,19 @@ const InfoBox = () => {
     <div className="info_box">
       <div className="info_items">
         <div className="info__reg">
-          <img src={reg} />
-          <h1>Register</h1>
+          {/* <img src={reg} /> */}
+          {/* <h1></h1> */}
           <p>
-            For registeration click here We also allow for registration via
-            whatsapp, click on the icon.
+            {/* <br/><br/> */}
+            The Indomitable kids contest is an online kiddies picture contest
+            that is powered by Kidiverse which displays the beauty and
+            Indomitable spirit of the Nigerian child. It is open to children
+            aged 0 to 10 years. We are on a mission to financially empower
+            parents through cash prizes to meet the needs of their kids. Our
+            vision is to have happy homes filled with happy kids.
           </p>
         </div>
-        <div className="info__vote">
+        {/* <div className="info__vote">
           <img src={vote} />
           <h1>Vote</h1>
           <p>
@@ -29,10 +34,11 @@ const InfoBox = () => {
           <img src={win} />
           <h1>Win</h1>
           <p>
-            First Prize: 1 Million Naira <br /> Second Prize: 500k Cash <br />Third Prize:
-            300k Cash <br/>And Loads of Consolation prizes to be won.
+            First Prize: 1 Million Naira <br /> Second Prize: 500k Cash <br />
+            Third Prize: 400k Cash <br />
+            And Loads of Consolation prizes to be won.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

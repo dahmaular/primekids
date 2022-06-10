@@ -52,6 +52,10 @@
     width: 100%;
     text-align: left;
 }
+.social-icons img {
+    /* background-color: #fff; */
+    margin-right: 10px;
+}
 
 .gpt3__footer-links div {
     width: 250px;
@@ -65,7 +69,7 @@
 
 .gpt3__footer-links_logo img {
     width: 118px;
-    height: 60px;
+    height: 118px;
 
     margin-bottom: 1rem;
 }

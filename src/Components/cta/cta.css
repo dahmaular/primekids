@@ -2,16 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 
   padding: 2rem;
-  margin: 4rem;
+  /* margin: 4rem; */
   border-radius: 1rem;
-  background: var(--gradient-bar);
-  -webkit-animation: slideIn 4s forwards;
-  -moz-animation: slideIn 4s forwards;
-  animation: slideIn 4s forwards;
-  animation-delay: 3s;
+  /* background: var(--gradient-bar); */
+  -webkit-animation: slideIn 3s forwards;
+  -moz-animation: slideIn 3s forwards;
+  animation: slideIn 3s forwards;
+  animation-delay: 2s;
 }
 @-webkit-keyframes slideIn {
   0% {
@@ -64,22 +64,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  align-content: center;
+  text-align: center;
 
   margin-left: 2rem;
 }
 
 .gpt3__cta-btn button {
-  background: #000;
+  background: #000000;
   color: #fff;
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 28px;
   line-height: 30px;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
+  border-width: 1px;
+  border-color: #fff;
 
-  border: none;
-  outline: none;
+  /* border: none;
+  outline: none; */
   cursor: pointer;
   min-width: 150px;
 }
@@ -98,8 +103,8 @@
 @media screen and (max-width: 550px) {
   .gpt3__cta {
     flex-direction: column;
-    margin: 4rem 2rem;
-    margin-top: -30px;
+    /* margin: 4rem 2rem; */
+    margin-top: -100px;
   }
 
   .gpt3__cta-content h3 {

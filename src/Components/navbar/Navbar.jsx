@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./Button";
 import './navbar.css';
-import kingLogo from '../../assets/kings_logo.png';
+import Logo from '../../assets/logo.png';
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -31,7 +31,7 @@ function Navbar() {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             {/* FLICKER Rave <i className="fab fa-typo3"></i> */}
-                <img src={kingLogo} alt="logo" width="130" height="40" />
+                <img src={Logo} alt="logo" width="90" height="90" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
@@ -43,10 +43,11 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
-                About Us
+              <Link to="/register" className="nav-links" onClick={closeMobileMenu}>
+               Register
               </Link>
             </li>
+            
             <li className="nav-item">
               <Link
                 to="/gallery"
@@ -54,6 +55,29 @@ function Navbar() {
                 onClick={closeMobileMenu}
               >
                 Gallery
+              </Link>
+            </li>
+            {/* <li className="nav-item">
+              <Link
+                to="/leaderboard" 
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Leaderboard
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                to="/halloffame" 
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
+                Hall Of Fame
+              </Link>
+            </li> */}
+            <li className="nav-item">
+              <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+                About Us
               </Link>
             </li>
             <li className="nav-item">
@@ -65,17 +89,8 @@ function Navbar() {
                 T&C
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                to={{ pathname: "https://buy.tmikmagazine.com/" }} 
-                target="_blank"
-                className="nav-links"
-                onClick={closeMobileMenu}
-              >
-                Programs
-              </Link>
-            </li>
-            <li className="nav-item">
+            
+            {/* <li className="nav-item">
               <Link
                 to="/register"
                 className="nav-links-mobile"
@@ -83,9 +98,9 @@ function Navbar() {
               >
                 Register
               </Link>
-            </li>
+            </li> */}
           </ul>
-          {button && <Button buttonStyle='btn--outline'>Register</Button>}
+          {/* {button && <Button buttonStyle='btn--outline'>Register</Button>} */}
         </div>
       </nav>
     </>

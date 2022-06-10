@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./countdown.css";
 
 export const CountdownTimer = () => {
@@ -9,7 +10,7 @@ export const CountdownTimer = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const countdown = () => {
-    const endDate = new Date("Janury 31, 2022 15:00:00").getTime();
+    const endDate = new Date("June 17, 2022 21:00:00").getTime();
     const today = new Date().getTime();
 
     const timeDiff = endDate - today;
@@ -47,26 +48,31 @@ export const CountdownTimer = () => {
           <div className="spinner"></div>
         </div>
       ) : (
-        <section className="container">
-          <h2>Stage 1 voting starts on </h2>
+        <section className="containers">
+          <h2>Stage 1 voting ends in: </h2>
           <div className="countdown">
            <article>
                <p>{days}</p>
+               {/* <p>0</p> */}
                <h3>Days</h3>
            </article>
            <article>
                <p>{hours}</p>
+               {/* <p>0</p> */}
                <h3>Hours</h3>
            </article>
            <article>
                <p>{minutes}</p>
+               {/* <p>0</p> */}
                <h3>Minutes</h3>
            </article>
            <article>
                <p>{seconds}</p>
+               {/* <p>0</p> */}
                <h3>Seconds</h3>
            </article>
        </div>
+      
         </section>
       )}
     </>

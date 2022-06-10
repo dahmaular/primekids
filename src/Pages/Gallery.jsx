@@ -1,8 +1,8 @@
 import React from "react";
-import "../containers/header/header.css";
-import people from "../assets/people.png";
-import ai from "../assets/ai.png";
+import "../styles/gallery.css";
+import bg from "../assets/primeKidSlides.jpg";
 import { Navbar } from "../Components";
+import Contestants from "../containers/contestants/contestants";
 
 const Gallery = () => {
   return (
@@ -10,33 +10,10 @@ const Gallery = () => {
       <div className="gradient__bg">
         <Navbar />
         <div className="gpt3__header" id="home">
-          <div className="gpt3__header-content">
-            <h1 className="gradient__text">
-              Let&apos;s Build Something amazing with GPT-3 OpenAI
-            </h1>
-            <p>
-              Yet bed any for travelling assistance indulgence unpleasing. Not
-              thoughts all exercise blessing. Indulgence way everything joy
-              alteration boisterous the attachment. Party we years to order
-              allow asked of.
-            </p>
-
-            <div className="gpt3__header-content__input">
-              <input type="email" placeholder="Your Email Address" />
-              <button type="button">Get Started</button>
-            </div>
-
-            <div className="gpt3__header-content__people">
-              <img src={people} />
-              <p>1,600 people requested access a visit in last 24 hours</p>
-            </div>
-          </div>
-
-          <div className="gpt3__header-image">
-            <img src={ai} />
-          </div>
+          <img src={bg} className="gal-image" />
         </div>
       </div>
+      <Contestants />
     </>
   );
 };

@@ -18,10 +18,10 @@ code {
 :root {
   --font-family: 'Poppins', sans-serif;
 
-  --gradient-text: linear-gradient(89.97deg, #0090C8 1.84%, #FFB600 102.67%);
+  --gradient-text: linear-gradient(89.97deg, #7B0065 1.84%, #FFB600 102.67%);
   --gradient-bar: linear-gradient(103.22deg, #784DFF -13.86%, #4BFE7F 99.55%);
   
-  --color-bg: #040C18;
+  --color-bg: #000000;
   --color-footer : #031B34;
   --color-blog: #042c54;
   --color-text: #81AFDD;
