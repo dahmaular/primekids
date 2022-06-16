@@ -21,13 +21,15 @@ export const Profile = (props) => {
     // voteContestantStage3
     // voteContestantStage2
     voteContestant,
+    settings,
   } = useContext(ContestantContext);
   const { id } = useParams();
   const url = window.location.href;
   // console.log(id, url);
+  console.log(parseInt(settings[0]?.stageVote))
 
-  const publicKey = "pk_live_e7a8830a35d772e53f2bbb1698bee7142e52f1d1";
-  // const publicKey = "pk_test_888f71a7ce183d42e822752ba847332ee7f836d8";
+  // const publicKey = "pk_live_e7a8830a35d772e53f2bbb1698bee7142e52f1d1";
+  const publicKey = `${settings[0]?.paymentKey}`;
 
   const [quantity, setQuantity] = useState(10);
   const [btnAmount, setBtnAmount] = useState(1000);
@@ -151,7 +153,7 @@ export const Profile = (props) => {
 
   useEffect(() => {
     fetchContestant(id);
-    setStage(350);
+    setStage(settings[0]?.stageVote);
   }, []);
 
   return (
@@ -188,7 +190,7 @@ export const Profile = (props) => {
               <button onClick={() => increase()} className="plus"></button>
             </div>
 
-            <PaystackButton className="paystack-button" {...componentProps} />
+            {settings[0]?.voteButton && (<PaystackButton className="paystack-button" {...componentProps} />)}
           </div>
           <hr className="mt-4"/>
           <CopyToClipboard text={url}

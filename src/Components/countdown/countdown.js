@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "./countdown.css";
 
+import {ContestantContext} from "../../services/contestants-service"
+
 export const CountdownTimer = () => {
+  const {settings} = useContext(ContestantContext);
   const [days, setDays] = useState(10);
   const [hours, setHours] = useState(10);
   const [minutes, setMinutes] = useState(10);
@@ -10,7 +13,7 @@ export const CountdownTimer = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const countdown = () => {
-    const endDate = new Date("June 17, 2022 21:00:00").getTime();
+    const endDate = new Date('June 17, 2023 21:00:00').getTime();
     const today = new Date().getTime();
 
     const timeDiff = endDate - today;

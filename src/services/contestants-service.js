@@ -12,6 +12,7 @@ export const ContestantContextProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [voteId, setVoteId] = useState();
+  const [settings, setSettings] = useState([]);
 
   const registerContestant = async (details) => {
     setIsLoading(true);
@@ -265,7 +266,28 @@ export const ContestantContextProvider = ({ children }) => {
     } catch (error) {
       console.log("fetching data error", error);
     }
-  }
+  };
+
+  const getSettings = async () => {
+    try {
+      await axios({
+        method: "get",
+        url: `${baseUrl}api/settings`,
+        headers: { "Content-Type": "application/json"},
+      }).then((resp) => {
+        if (resp.status == 200){
+          console.log(resp.data);
+          setSettings(resp.data);
+        }
+      });
+    } catch (error) {
+      console.log("fetching data error", error)
+    }
+  };
+
+  useEffect(() => {
+    getSettings();
+  },[])
 
   return (
     <ContestantContext.Provider
@@ -293,6 +315,8 @@ export const ContestantContextProvider = ({ children }) => {
         voteContestantStage3,
         savePayment,
         voteId,
+        settings,
+        getSettings
       }}
     >
       {children}
